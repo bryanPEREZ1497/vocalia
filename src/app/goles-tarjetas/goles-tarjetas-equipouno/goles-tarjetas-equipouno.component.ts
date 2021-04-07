@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { BARCELONA } from "../../jugadores-mock";
 import { Jugador } from "../../jugador";
+import { PartidoService } from "../../services/partido.service";
 @Component({
   selector: 'app-goles-tarjetas-equipouno',
   templateUrl: './goles-tarjetas-equipouno.component.html',
   styleUrls: ['./goles-tarjetas-equipouno.component.css']
 })
 export class GolesTarjetasEquipounoComponent implements OnInit {
-  displayedColumns = ['camiseta', 'nombre', 'goles'];
   goleadores: Jugador[] = [];
   goles: number = 0;
-  constructor() { }
+  constructor(private partidoService: PartidoService) { }
 
   ngOnInit(): void {
   }
@@ -46,5 +46,9 @@ export class GolesTarjetasEquipounoComponent implements OnInit {
         }
       }
     }
+  }
+  save(): void {
+    this.partidoService.save(this.goleadores, '606ddda5eb24000b3cf82267')
+      .subscribe();
   }
 }
