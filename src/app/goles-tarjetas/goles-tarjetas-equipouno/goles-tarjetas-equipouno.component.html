@@ -4,21 +4,54 @@
         <p>{{goles}}</p>
     </div>
     <div>
-        <!-- <mat-form-field>
+        <mat-form-field>
             <mat-label>Número de jugador</mat-label>
             <input matInput #camiseta type="number" required>
-        </mat-form-field> -->
-        <input type="number" required #camiseta>
+        </mat-form-field>
+        <!-- <input type="number" required #camiseta> -->
         <button mat-raised-button (click)="newGoal(camiseta.value);camiseta.value=''">+ Nuevo gol</button>
     </div>
-    <div *ngIf="goleadores">
-        <ul>
-            <li *ngFor="let goleador of goleadores">
-                {{goleador.nombre}} ----- {{goleador.camiseta}} ----- {{goleador.goles}}
-                <button (click)="plus(goleador.camiseta)">+</button>
-                <button (click)="minus(goleador.camiseta)">-</button>
-            </li>
-        </ul>
+
+    <div>
+        <table *ngIf="goleadores">
+            <tr>
+                <th>Camiseta</th>
+                <th>Nombre</th>
+                <th>Goles</th>
+            </tr>
+            <tr *ngFor="let goleador of goleadores">
+                <td>{{goleador.camiseta}}</td>
+                <td>{{goleador.nombre}}</td>
+                <td>{{goleador.goles}}</td>
+                <td>
+                    <button (click)="plus(goleador.camiseta)">+</button>
+                    <button (click)="minus(goleador.camiseta)">-</button>
+                </td>
+
+            </tr>
+        </table>
     </div>
+    <!-- <div >
+        <mat-table  *ngIf="goleadores" [dataSource]="goleadores" class="mat-elevation-z8">
+            <ng-container matColumnDef="camiseta">
+              <mat-header-cell *matHeaderCellDef> Camiseta </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.camiseta}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="nombre">
+              <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="goles">
+              <mat-header-cell *matHeaderCellDef> Goles </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.goles}} </mat-cell>
+            </ng-container>
+          
+          
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+    </div> -->
 
 </div>

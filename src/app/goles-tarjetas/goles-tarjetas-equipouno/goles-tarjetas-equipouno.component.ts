@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JUGADORES } from "../../jugadores-mock";
+import { BARCELONA } from "../../jugadores-mock";
 import { Jugador } from "../../jugador";
 @Component({
   selector: 'app-goles-tarjetas-equipouno',
@@ -7,6 +7,7 @@ import { Jugador } from "../../jugador";
   styleUrls: ['./goles-tarjetas-equipouno.component.css']
 })
 export class GolesTarjetasEquipounoComponent implements OnInit {
+  displayedColumns = ['camiseta', 'nombre', 'goles'];
   goleadores: Jugador[] = [];
   goles: number = 0;
   constructor() { }
@@ -14,7 +15,7 @@ export class GolesTarjetasEquipounoComponent implements OnInit {
   ngOnInit(): void {
   }
   newGoal(camiseta: number): void {
-    for (let jugador of JUGADORES) {
+    for (let jugador of BARCELONA) {
       if (jugador.camiseta == camiseta) {
         if (this.goleadores.includes(jugador)) {
           this.plus(camiseta);
