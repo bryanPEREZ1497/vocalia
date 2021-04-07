@@ -1,11 +1,11 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GolesTarjetasComponent } from './goles-tarjetas/goles-tarjetas/goles-tarjetas.component';
+import { GolesTarjetasEquipounoComponent } from './goles-tarjetas/goles-tarjetas-equipouno/goles-tarjetas-equipouno.component';
 
 const routes: Routes = [
   {
     path: 'goles',
-    component: GolesTarjetasComponent
+    component: GolesTarjetasEquipounoComponent
   }, {
     path: '',
     redirectTo: '/goles',

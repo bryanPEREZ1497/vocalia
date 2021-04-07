@@ -4,18 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from "./material/material.module";
-import { GolesTarjetasComponent } from "./goles-tarjetas/goles-tarjetas/goles-tarjetas.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GolesTarjetasEquipodosComponent } from './goles-tarjetas/goles-tarjetas-equipodos/goles-tarjetas-equipodos.component';
+import { GolesTarjetasEquipounoComponent } from './goles-tarjetas/goles-tarjetas-equipouno/goles-tarjetas-equipouno.component';
 @NgModule({
   declarations: [
     AppComponent,
-    GolesTarjetasComponent
+    GolesTarjetasEquipodosComponent,
+    GolesTarjetasEquipounoComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-BrowserAnimationsModule,
+    BrowserAnimationsModule,
     MaterialModule
   ],
   providers: [],

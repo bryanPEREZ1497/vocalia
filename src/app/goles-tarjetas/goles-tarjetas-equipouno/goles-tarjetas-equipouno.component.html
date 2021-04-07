@@ -1,0 +1,24 @@
+<div>
+    <div>
+        <img src="assets/images/barcelona-fc.png" alt="equipo1">
+        <p>{{goles}}</p>
+    </div>
+    <div>
+        <!-- <mat-form-field>
+            <mat-label>Número de jugador</mat-label>
+            <input matInput #camiseta type="number" required>
+        </mat-form-field> -->
+        <input type="number" required #camiseta>
+        <button mat-raised-button (click)="newGoal(camiseta.value);camiseta.value=''">+ Nuevo gol</button>
+    </div>
+    <div *ngIf="goleadores">
+        <ul>
+            <li *ngFor="let goleador of goleadores">
+                {{goleador.nombre}} ----- {{goleador.camiseta}} ----- {{goleador.goles}}
+                <button (click)="plus(goleador.camiseta)">+</button>
+                <button (click)="minus(goleador.camiseta)">-</button>
+            </li>
+        </ul>
+    </div>
+
+</div>
