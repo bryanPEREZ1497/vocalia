@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GolesTarjetasEquipounoComponent } from './goles-tarjetas/goles-tarjetas-equipouno/goles-tarjetas-equipouno.component';
 import { PartidoComponent } from "./partido/partido.component";
+import { ListaJugadoresComponent } from "./lista-jugadores/lista-jugadores.component";
 const routes: Routes = [
   {
     path: 'partido',
@@ -9,6 +10,9 @@ const routes: Routes = [
   }, {
     path: 'goles',
     component: GolesTarjetasEquipounoComponent
+  }, {
+    path: 'lista',
+    component: ListaJugadoresComponent
   }, {
     path: '',
     redirectTo: '/partido',

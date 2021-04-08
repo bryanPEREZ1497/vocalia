@@ -14,13 +14,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { PartidoComponent } from './partido/partido.component';
+import { ListaJugadoresComponent } from './lista-jugadores/lista-jugadores.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GolesTarjetasEquipodosComponent,
     GolesTarjetasEquipounoComponent,
-    PartidoComponent
+    PartidoComponent,
+    ListaJugadoresComponent
 
   ],
   imports: [

@@ -1,5 +1,18 @@
+<mat-toolbar color="primary" class="navbar">
+
+    <mat-toolbar-row>
+        <nav>
+            <span><a class="button" routerLink="/lista" routerLinkActive="activebutton">Lista de Jugadores</a></span>
+            <span><a class="button" routerLink="/goles" routerLinkActive="activebutton">Goles y Tarjetas</a></span>
+            <span><a class="button">Guardar Información</a></span>
+        </nav>
+
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
 <div>
-    <button mat-raised-button (click)="save()">Guardar Información</button>
     <div>
         <img src="assets/images/barcelona-fc.png" alt="equipo1">
         <p>{{goles}}</p>
@@ -9,7 +22,6 @@
             <mat-label>Número de jugador</mat-label>
             <input matInput #camiseta type="number" required>
         </mat-form-field>
-        <!-- <input type="number" required #camiseta> -->
         <button mat-raised-button (click)="newGoal(camiseta.value);camiseta.value=''">+ Nuevo gol</button>
     </div>
 
@@ -32,27 +44,4 @@
             </tr>
         </table>
     </div>
-    <!-- <div >
-        <mat-table  *ngIf="goleadores" [dataSource]="goleadores" class="mat-elevation-z8">
-            <ng-container matColumnDef="camiseta">
-              <mat-header-cell *matHeaderCellDef> Camiseta </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.camiseta}} </mat-cell>
-            </ng-container>
-          
-            <ng-container matColumnDef="nombre">
-              <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
-            </ng-container>
-          
-            <ng-container matColumnDef="goles">
-              <mat-header-cell *matHeaderCellDef> Goles </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.goles}} </mat-cell>
-            </ng-container>
-          
-          
-            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-          </mat-table>
-    </div> -->
-
 </div>
