@@ -13,15 +13,15 @@ export class PartidoService {
   save(goleadores: Jugador[], id: string): Observable<any[]> {
     return this.http.put<any[]>(`${URL}/partidos/${id}`, goleadores)
       .pipe(
-        tap(_ => this.log('Cuentas recibidas')),
+        tap(_ => this.log('Partido Guardado')),
         catchError(this.handleError<any[]>('devolverCuentas', []))
       );
   }
-  get(id: string): Observable<any[]> {
-    return this.http.get<any[]>(`${URL}/partidos/${id}`)
+  get(id: string): Observable<any> {
+    return this.http.get<any>(`${URL}/partidos/${id}`)
       .pipe(
-        tap(_ => this.log('Cuentas recibidas')),
-        catchError(this.handleError<any[]>('devolverCuentas', []))
+        tap(_ => this.log('Partido recibido')),
+        catchError(this.handleError<any[]>('get', []))
       );
   }
   private log(mensaje: string): void {

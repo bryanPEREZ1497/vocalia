@@ -49,6 +49,6 @@ export class GolesTarjetasEquipounoComponent implements OnInit {
   }
   save(): void {
     this.partidoService.save(this.goleadores, '606ddda5eb24000b3cf82267')
-      .subscribe();
+      .subscribe(data => console.log(data));
   }
 }

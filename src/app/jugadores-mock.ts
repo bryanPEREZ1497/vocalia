@@ -1,13 +1,13 @@
-// import { Jugador } from "./jugador";
-// export const BARCELONA: Jugador[] = [
-//     { nombre: 'BRYAN', camiseta: 10, goles: 0, equipo: 'Barcelona' },
-//     { nombre: 'JOSE', camiseta: 9, goles: 0, equipo: 'Barcelona' },
-//     { nombre: 'STEVEN', camiseta: 8, goles: 0, equipo: 'Barcelona' },
-//     { nombre: 'PAUL', camiseta: 7, goles: 0, equipo: 'Barcelona' },
-//     { nombre: 'JORGE', camiseta: 6, goles: 0, equipo: 'Barcelona' },
-//     { nombre: 'CARLOS', camiseta: 5, goles: 0, equipo: 'Barcelona' },
-//     { nombre: 'LUIS', camiseta: 4, goles: 0, equipo: 'Barcelona' }
-// ]
+import { Jugador } from "./jugador";
+export const BARCELONA: Jugador[] = [
+    { nombre: 'BRYAN', camiseta: 10, goles: 0, amarillas: 0, rojas: 0 },
+    { nombre: 'JOSE', camiseta: 9, goles: 0, amarillas: 0, rojas: 0 },
+    { nombre: 'STEVEN', camiseta: 8, goles: 0, amarillas: 0, rojas: 0 },
+    { nombre: 'PAUL', camiseta: 7, goles: 0, amarillas: 0, rojas: 0 },
+    { nombre: 'JORGE', camiseta: 6, goles: 0, amarillas: 0, rojas: 0 },
+    { nombre: 'CARLOS', camiseta: 5, goles: 0, amarillas: 0, rojas: 0 },
+    { nombre: 'LUIS', camiseta: 4, goles: 0, amarillas: 0, rojas: 0 }
+]
 
 // export const MADRID: Jugador[] = [
 //     { nombre: 'GALO', camiseta: 10, goles: 0, equipo: 'Madrid' },
