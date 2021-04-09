@@ -27,24 +27,16 @@ export class GolesTarjetasEquipounoComponent implements OnInit {
       }
     }
   }
-  plus(camiseta: number): void {
-    for (let goleador of this.goleadores) {
-      if (goleador.camiseta == camiseta) {
-        goleador.goles++;
-        this.goles++;
-      }
-    }
+  plus(goleador: any): void {
+    goleador.goles++;
+    this.goles++;
   }
-  minus(camiseta: number): void {
-    for (let goleador of this.goleadores) {
-      if (goleador.camiseta == camiseta) {
-        goleador.goles--;
-        this.goles--;
-        if (!goleador.goles) {
-          let index = this.goleadores.indexOf(goleador);
-          this.goleadores.splice(index, 1);
-        }
-      }
+  minus(goleador: any): void {
+    goleador.goles--;
+    this.goles--;
+    if (!goleador.goles) {
+      let index = this.goleadores.indexOf(goleador);
+      this.goleadores.splice(index, 1);
     }
   }
   save(): void {
