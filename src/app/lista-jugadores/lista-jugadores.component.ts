@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BARCELONA } from "../../jugadores-mock";
-import { Jugador } from "../../jugador";
+import { BARCELONA } from "../jugadores-mock";
+import { Jugador } from "../jugador";
 
 @Component({
   selector: 'app-lista-jugadores',
