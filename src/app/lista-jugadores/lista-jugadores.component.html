@@ -1,1 +1,16 @@
 <app-navbar></app-navbar>
+
+<div>
+    <table *ngIf="jugadores">
+        <tr>
+            <th>Camiseta</th>
+            <th>Nombre</th>
+            <th>Goles</th>
+        </tr>
+        <tr *ngFor="let jugador of jugadores">
+            <td>{{jugador.camiseta}}</td>
+            <td>{{jugador.nombre}}</td>
+            <td>{{jugador.goles}}</td>
+        </tr>
+    </table>
+</div>
