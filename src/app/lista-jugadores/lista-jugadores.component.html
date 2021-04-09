@@ -11,11 +11,16 @@
     </mat-toolbar-row>
 </mat-toolbar>
 <div>
+    <div>
+        <img src="assets/images/barcelona-fc.png" alt="equipo1">
+    </div>
     <table *ngIf="jugadores">
         <tr>
             <th>Camiseta</th>
-            <th>Nombre</th>
+            <th>Nombre del jugador</th>
             <th>Goles</th>
+            <th>Estado</th>
+            <th>Posición</th>
         </tr>
         <tr *ngFor="let jugador of jugadores">
             <td>{{jugador.camiseta}}</td>
