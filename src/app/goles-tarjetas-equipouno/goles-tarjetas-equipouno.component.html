@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<div class="equipos">
+    <div class="equipo" *ngFor="let equipo of equipos">
+        <div>
+            <img [src]="equipo.src" alt="">
+            <p>{{equipo.goles}}</p>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Número de jugador</mat-label>
+                <input matInput #camiseta type="number" required>
+            </mat-form-field>
+            <button mat-raised-button (click)="newGoal(camiseta.value,equipo.nombre);camiseta.value=''">+ Nuevo
+                gol</button>
+        </div>
+
+        <div>
+            <table *ngIf="equipo.goleadores">
+                <tr>
+                    <th>Camiseta</th>
+                    <th>Nombre</th>
+                    <th>Goles</th>
+                </tr>
+                <tr *ngFor="let goleador of equipo.goleadores">
+                    <td>{{goleador.camiseta}}</td>
+                    <td>{{goleador.nombre}}</td>
+                    <td>{{goleador.goles}}</td>
+                    <td>
+                        <button (click)="plus(goleador,equipo)">+</button>
+                        <button (click)="minus(goleador,equipo)">-</button>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
