@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BARCELONA } from "../jugadores-mock";
+import { BARCELONA, MADRID } from "../jugadores-mock";
 import { Jugador } from "../jugador";
 
 @Component({
@@ -9,10 +9,12 @@ import { Jugador } from "../jugador";
 })
 export class ListaJugadoresComponent implements OnInit {
   jugadores: Jugador[] = [];
+  jugadores2: Jugador[] = [];
   constructor() { }
 
   ngOnInit(): void {
     this.jugadores = BARCELONA;
+    this.jugadores2 = MADRID;
   }
 
 }

@@ -14,6 +14,7 @@
     <div>
         <img src="assets/images/barcelona-fc.png" alt="equipo1">
     </div>
+    <div>
     <table *ngIf="jugadores">
         <tr>
             <th>Camiseta</th>
@@ -26,6 +27,34 @@
             <td>{{jugador.camiseta}}</td>
             <td>{{jugador.nombre}}</td>
             <td>{{jugador.goles}}</td>
+            <td>{{jugador.estado}}</td>
+            <td>{{jugador.posicion}}</td>
         </tr>
     </table>
+    </div>
+</div>
+
+<div>
+    <div>
+        <img src="assets/images/Real-Madrid.png" alt="equipo2">
+    </div>
+
+    <div>
+    <table *ngIf="jugadores">
+        <tr>
+            <th>Camiseta</th>
+            <th>Nombre del jugador</th>
+            <th>Goles</th>
+            <th>Estado</th>
+            <th>Posición</th>
+        </tr>
+        <tr *ngFor="let jugador of jugadores2">
+            <td>{{jugador.camiseta}}</td>
+            <td>{{jugador.nombre}}</td>
+            <td>{{jugador.goles}}</td>
+            <td>{{jugador.estado}}</td>
+            <td>{{jugador.posicion}}</td>
+        </tr>
+    </table>
+    </div>
 </div>
