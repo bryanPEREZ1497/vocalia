@@ -12,7 +12,7 @@ export class PartidoComponent implements OnInit {
   constructor(private partido: PartidoService) { }
 
   ngOnInit(): void {
-    this.getPartido();
+    // this.getPartido();
   }
   getPartido() {
     this.partido.get('606ddda5eb24000b3cf82267')

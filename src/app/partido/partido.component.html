@@ -13,8 +13,9 @@
 
     </mat-toolbar-row>
 </mat-toolbar>
+<div *ngIf="data">
+    Vocal<h3>{{data.vocal}}</h3>
+    Árbitro<h3>{{data.arbitro}}</h3>
+    <h3>{{data.equipos[0].nombre}}</h3>VS<h3>{{data.equipos[1].nombre}}</h3>
 
-Vocal<h3>{{data.vocal}}</h3>
-Árbitro<h3>{{data.arbitro}}</h3>
-<h3>{{data.equipos[0].nombre}}</h3>VS<h3>{{data.equipos[1].nombre}}</h3>
-
+</div>
