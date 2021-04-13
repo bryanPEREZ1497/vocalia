@@ -1,9 +1,10 @@
 <app-navbar></app-navbar>
 
 <div class="equipos">
+    <h3>Goles</h3>
     <div class="equipo" *ngFor="let equipo of equipos">
         <div>
-            <img [src]="equipo.src" alt="">
+            <img [src]="equipo.src" alt="" width="200" height="">
             <p>{{equipo.goles}}</p>
         </div>
         <div>
@@ -27,8 +28,8 @@
                     <td>{{goleador.nombre}}</td>
                     <td>{{goleador.goles}}</td>
                     <td>
-                        <button mat-raised-button  (click)="plus(goleador,equipo)">+</button>
-                        <button mat-raised-button  (click)="minus(goleador,equipo)">-</button>
+                        <button mat-raised-button (click)="plus(goleador,equipo)">+</button>
+                        <button mat-raised-button (click)="minus(goleador,equipo)">-</button>
                     </td>
 
                 </tr>
@@ -37,3 +38,4 @@
     </div>
 
 </div>
+<app-tarjetas></app-tarjetas>

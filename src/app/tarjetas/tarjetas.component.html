@@ -1,0 +1,48 @@
+<div class="equipos">
+    <h3>Tarjetas</h3>
+    <div class="equipo" *ngFor="let equipo of equipos">
+        <div>
+            <img [src]="equipo.src" alt="" width="200" height="">
+            <p>Amarillas{{equipo.amarillas}}</p>
+            <p>Rojas{{equipo.rojas}}</p>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Número de jugador</mat-label>
+                <input matInput #camiseta type="number" required>
+            </mat-form-field>
+            <button mat-raised-button (click)="Amarilla(camiseta.value,equipo.nombre);camiseta.value=''">+ Nuevo
+                Amarilla</button>
+            <button mat-raised-button (click)="Roja(camiseta.value,equipo.nombre);camiseta.value=''">+ Nuevo
+                Roja</button>
+        </div>
+
+        <div>
+            <table *ngIf="equipo.sancionados">
+                <tr>
+                    <th>Camiseta</th>
+                    <th>Nombre</th>
+                    <th>Amarillas</th>
+                    <th>Rojas</th>
+                </tr>
+                <tr *ngFor="let sancionado of equipo.sancionados">
+                    <td>{{sancionado.camiseta}}</td>
+                    <td>{{sancionado.nombre}}</td>
+                    
+                    <td>
+                        {{sancionado.amarillas}}
+                        <button mat-raised-button class="plus" (click)="plus(sancionado,equipo,'amarilla')">+</button>
+                        <button mat-raised-button class="minus" (click)="minus(sancionado,equipo,'amarilla')">-</button>
+                    </td>
+                    <td>
+                        {{sancionado.rojas}}
+                        <button mat-raised-button class="plus" (click)="plus(sancionado,equipo,'roja')">+</button>
+                        <button mat-raised-button class="minus" (click)="minus(sancionado,equipo,'roja')">-</button>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,31 @@
+.equipos{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.plus {
+    background-color: #3144b3;
+    color: white;
+    display:block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.minus {
+    background-color: #c54040;
+    color: white;
+    display:block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+/*padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}  */

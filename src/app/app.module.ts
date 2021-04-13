@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TarjetasComponent } from './tarjetas/tarjetas.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ListaJugadoresComponent,
     NavbarComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    TarjetasComponent
 
   ],
   imports: [
