@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PartidoService } from "../services/partido.service";
-
+import { BARCELONA,MADRID } from "../jugadores-mock";
 @Component({
   selector: 'app-partido',
   templateUrl: './partido.component.html',
@@ -8,7 +8,10 @@ import { PartidoService } from "../services/partido.service";
 })
 export class PartidoComponent implements OnInit {
   data: any;
-
+  equipos=[
+    {jugadores:BARCELONA,nombre:'Barcelona'},
+    {jugadores:MADRID,nombre:'Madrid'}
+  ]
   constructor(private partido: PartidoService) { }
 
   ngOnInit(): void {
