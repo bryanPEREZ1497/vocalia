@@ -1,16 +1,70 @@
 <app-navbar></app-navbar>
 
-<div>
-    <table *ngIf="jugadores">
-        <tr>
-            <th>Camiseta</th>
-            <th>Nombre</th>
-            <th>Goles</th>
-        </tr>
-        <tr *ngFor="let jugador of jugadores">
-            <td>{{jugador.camiseta}}</td>
-            <td>{{jugador.nombre}}</td>
-            <td>{{jugador.goles}}</td>
-        </tr>
-    </table>
+<div class="equipos">
+    <div>
+        <div>
+            <img src="assets/images/barcelona-fc.png" width="200" height="" alt="equipo1">
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Observaciones</mat-label>
+                <input matInput #equipo1 type="text" required>
+            </mat-form-field>
+            <button mat-raised-button (click)="newObservacion(equipo1.value);equipo1.value=''">+ Nueva
+               observación </button>
+        </div>
+        <div>
+            <table *ngIf="observaciones.equipo1">
+                <tr>
+                    <th>Observaciones</th>
+                </tr>
+                <tr *ngFor="let observacion of observaciones.equipo1">
+                    <td>{{observacion}}</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table *ngIf="jugadores">
+                <tr>
+                    <th>Camiseta</th>
+                    <th>Nombre del jugador</th>
+                    <th>Goles</th>
+                    <th>Estado</th>
+                    <th>Posición</th>
+                </tr>
+                <tr *ngFor="let jugador of jugadores">
+                    <td>{{jugador.camiseta}}</td>
+                    <td>{{jugador.nombre}}</td>
+                    <td>{{jugador.goles}}</td>
+                    <td>{{jugador.estado}}</td>
+                    <td>{{jugador.posicion}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <img src="assets/images/Real-Madrid.png" width="400" height="" alt="equipo2">
+        </div>
+
+        <div>
+            <table *ngIf="jugadores2">
+                <tr>
+                    <th>Camiseta</th>
+                    <th>Nombre del jugador</th>
+                    <th>Goles</th>
+                    <th>Estado</th>
+                    <th>Posición</th>
+                </tr>
+                <tr *ngFor="let jugador of jugadores2">
+                    <td>{{jugador.camiseta}}</td>
+                    <td>{{jugador.nombre}}</td>
+                    <td>{{jugador.goles}}</td>
+                    <td>{{jugador.estado}}</td>
+                    <td>{{jugador.posicion}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
