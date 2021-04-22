@@ -1,28 +1,47 @@
-  .equipos{
+body {
+  background-color: black;
+  /* background: radial-gradient(black 3px, transparent 4px), radial-gradient(black 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #fff; */
+  /* background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px; */
+  /* background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px; */
+  /* color: #000000; */
+  font-family: 'Manjari', sans-serif;
+}
+.equipos{
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
     display: grid;
-    grid-template-columns: auto auto auto;
-    
+    gap: 1.6em;
+    grid-template-columns: repeat(2, 1fr);
+    border: none;
+    border-radius: 1em;
+    box-shadow:0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
 
   }
   .equipo{
-    border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     /* font-size: 30px; */
     text-align: center;
 
   }
   
-  .equipos{
+  /* .equipos{
     margin: auto;
     width: 50%;
     padding: 10px;
-  }
-  h3{
+  } */
+  /* h3{
     margin: auto;
     width: 50%;
     text-align: center;
 
-  }
+  } */
   img{
     width: 300px;
   }
+
+  .title h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.9em;
+}

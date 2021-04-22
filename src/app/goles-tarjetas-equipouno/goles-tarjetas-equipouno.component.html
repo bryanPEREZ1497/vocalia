@@ -1,17 +1,21 @@
 <app-navbar></app-navbar>
-<h3>Goles</h3>
+<header class="title">
+    <h1>Goles</h1>
+</header>
 <div class="equipos">
     <div class="equipo" *ngFor="let equipo of equipos">
         <div>
             <img [src]="equipo.src" alt="" width="200" height="">
-            <p>{{equipo.goles}}</p>
+            <p>{{equipo.goles}}<span style="color: black" class="material-icons">
+                    sports_soccer
+                </span></p>
         </div>
         <div>
             <mat-form-field>
                 <mat-label>Número de jugador</mat-label>
-                <input matInput #camiseta type="number" required>
+                <input matInput #camiseta type="number" (keyup.enter)="newGoal(camiseta.value,equipo.nombre);camiseta.value=''" required>
             </mat-form-field>
-            <button mat-raised-button (click)="newGoal(camiseta.value,equipo.nombre);camiseta.value=''">+ Nuevo
+            <button mat-raised-button  (click)="newGoal(camiseta.value,equipo.nombre);camiseta.value=''">+ Nuevo
                 gol</button>
         </div>
 
@@ -20,21 +24,31 @@
                 <tr>
                     <th>Camiseta</th>
                     <th>Nombre</th>
-                    <th>Goles</th>
+                    <th>Goles<span class="material-icons">
+                            sports_soccer
+                        </span></th>
                 </tr>
                 <tr *ngFor="let goleador of equipo.goleadores">
                     <td>{{goleador.camiseta}}</td>
                     <td>{{goleador.nombre}}</td>
-                    <td>{{goleador.goles}}</td>
-                    <td>
-                        <button mat-raised-button (click)="plus(goleador,equipo)">+</button>
-                        <button mat-raised-button (click)="minus(goleador,equipo)">-</button>
+                    <td>{{goleador.goles}}
+
+                        <span style="cursor: pointer;
+                        color: blue;" class="material-icons" (click)="plus(goleador,equipo)">
+                            add_circle
+                        </span>
+
+                        <span style="cursor: pointer;
+                        color: red" class="material-icons" (click)="minus(goleador,equipo)">
+                            remove_circle
+                        </span>
                     </td>
 
                 </tr>
             </table>
         </div>
     </div>
+    <hr>
 
 </div>
 <br>
