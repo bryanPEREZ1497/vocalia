@@ -4,6 +4,25 @@
     
 
   }
-  /* .equipo{
-    overflow: auto;
-  } */
+  .equipo{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    /* font-size: 30px; */
+    text-align: center;
+
+  }
+  
+  .equipos{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+  h3{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+
+  }
+  img{
+    width: 300px;
+  }

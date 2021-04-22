@@ -18,9 +18,23 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
-}
+}.equipo{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    /* font-size: 30px; */
+    text-align: center;
+  }
 
+  .equipos{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }h3{
+    margin: auto;
+    width: 50%;
+    text-align: center;
 
+  }
 /*padding: 20px;
   text-align: center;
   text-decoration: none;
