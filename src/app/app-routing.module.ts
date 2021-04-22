@@ -9,10 +9,12 @@ import { AuthGuard } from "./auth.guard";
 const routes: Routes = [
   {
     path: 'goles',
-    component: GolesTarjetasEquipounoComponent
+    component: GolesTarjetasEquipounoComponent,
+    canActivate: [AuthGuard]
   }, {
     path: 'lista',
-    component: ListaJugadoresComponent
+    component: ListaJugadoresComponent,
+    canActivate: [AuthGuard]
   }, {
     path: 'partido',
     component: PartidoComponent,
