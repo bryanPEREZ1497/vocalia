@@ -1,15 +1,25 @@
-<h3>Tarjetas</h3>
+<header class="title">
+    <h1>Tarjetas</h1>
+</header>
 <div class="equipos">
     <div class="equipo" *ngFor="let equipo of equipos">
-        <div>
-            <img [src]="equipo.src" alt="" width="200" height="">
-            <p>Amarillas{{equipo.amarillas}}</p>
-            <p>Rojas{{equipo.rojas}}</p>
+        <div class="head-team">
+            <img [src]="equipo.src" alt="" width="60%" height="">
+            <div>
+                <p>{{equipo.amarillas}}<span style="color: yellow" class="material-icons">
+                        style
+                    </span>
+                </p>
+                <p>{{equipo.rojas}}<span style="color: red" class="material-icons">
+                        style
+                    </span></p>
+            </div>
         </div>
         <div>
             <mat-form-field>
                 <mat-label>Número de jugador</mat-label>
-                <input matInput #camiseta type="number" required>
+                <input matInput #camiseta type="number"
+                    (keyup.enter)="Amarilla(camiseta.value,equipo.nombre);camiseta.value=''" required>
             </mat-form-field>
             <button mat-raised-button (click)="Amarilla(camiseta.value,equipo.nombre);camiseta.value=''">+ Nuevo
                 Amarilla</button>
@@ -22,22 +32,45 @@
                 <tr>
                     <th>Camiseta</th>
                     <th>Nombre</th>
-                    <th>Amarillas</th>
-                    <th>Rojas</th>
+                    <th>Amarillas<span style="color: yellow" class="material-icons">
+                            style
+                        </span></th>
+                    <th>Rojas<span style="color: red" class="material-icons">
+                            style
+                        </span></th>
                 </tr>
                 <tr *ngFor="let sancionado of equipo.sancionados">
                     <td>{{sancionado.camiseta}}</td>
                     <td>{{sancionado.nombre}}</td>
-                    
+
                     <td>
                         {{sancionado.amarillas}}
-                        <button mat-raised-button class="plus" (click)="plus(sancionado,equipo,'amarilla')">+</button>
-                        <button mat-raised-button class="minus" (click)="minus(sancionado,equipo,'amarilla')">-</button>
+                        <span style="cursor: pointer;
+                        color: blue;" class="material-icons" (click)="plus(sancionado,equipo,'amarilla')">
+                            add_circle
+                        </span>
+
+                        <span style="cursor: pointer;
+                        color: red" class="material-icons" (click)="minus(sancionado,equipo,'amarilla')">
+                            remove_circle
+                        </span>
+
+                        <!-- <button mat-raised-button class="plus" (click)="plus(sancionado,equipo,'amarilla')">+</button>
+                        <button mat-raised-button class="minus" (click)="minus(sancionado,equipo,'amarilla')">-</button> -->
                     </td>
                     <td>
                         {{sancionado.rojas}}
-                        <button mat-raised-button class="plus" (click)="plus(sancionado,equipo,'roja')">+</button>
-                        <button mat-raised-button class="minus" (click)="minus(sancionado,equipo,'roja')">-</button>
+                        <span style="cursor: pointer;
+                        color: blue;" class="material-icons" (click)="plus(sancionado,equipo,'roja')">
+                            add_circle
+                        </span>
+
+                        <span style="cursor: pointer;
+                        color: red" class="material-icons" (click)="minus(sancionado,equipo,'roja')">
+                            remove_circle
+                        </span>
+                        <!-- <button mat-raised-button class="plus" (click)="plus(sancionado,equipo,'roja')">+</button>
+                        <button mat-raised-button class="minus" (click)="minus(sancionado,equipo,'roja')">-</button> -->
                     </td>
 
                 </tr>
