@@ -9,7 +9,8 @@ import { Jugador } from "../jugador";
 })
 export class ListaJugadoresComponent implements OnInit {
   observaciones = {
-    equipo1:[]
+    equipo1:[],
+    equipo2:[]
   }
   jugadores: Jugador[] = [];
   jugadores2: Jugador[] = [];
@@ -21,5 +22,8 @@ export class ListaJugadoresComponent implements OnInit {
   }
   newObservacion(observacion:string){
     this.observaciones.equipo1.push(observacion);
+  }
+  newObservacion2(observacion:string){
+    this.observaciones.equipo2.push(observacion);
   }
 }

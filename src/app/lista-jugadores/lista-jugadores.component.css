@@ -38,4 +38,23 @@
     
     grid-column-gap: 100px;
   }
-  
+
+  .title h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.9em;
+}
+
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}

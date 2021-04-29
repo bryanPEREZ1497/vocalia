@@ -10,11 +10,11 @@ const routes: Routes = [
   {
     path: 'goles',
     component: GolesTarjetasEquipounoComponent
-///<<<<<<< HEAD
+
     
-///=======
+
     // canActivate: [AuthGuard]
-///>>>>>>> f2d12e98fddfc2a8e31264bb2723599af1732c4f
+
   }, {
     path: 'lista',
     component: ListaJugadoresComponent

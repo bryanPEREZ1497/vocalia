@@ -1,5 +1,7 @@
 <app-navbar></app-navbar>
-
+<header class="title">
+<h1>Lista de jugadores</h1>
+</header>
 <div class="equipos">
     <div>
         <div>
@@ -47,7 +49,24 @@
         <div>
             <img src="assets/images/Real-Madrid.png" width="400" height="" alt="equipo2">
         </div>
-
+        <div>
+            <mat-form-field>
+                <mat-label>Observaciones</mat-label>
+                <input matInput #equipo2 type="text" required>
+            </mat-form-field>
+            <button mat-raised-button (click)="newObservacion2(equipo2.value);equipo2.value=''">+ Nueva
+               observación </button>
+        </div>
+        <div>
+            <table *ngIf="observaciones.equipo2">
+                <tr>
+                    <th>Observaciones</th>
+                </tr>
+                <tr *ngFor="let observacion of observaciones.equipo2">
+                    <td>{{observacion}}</td>
+                </tr>
+            </table>
+        </div>
         <div>
             <table *ngIf="jugadores2">
                 <tr>
