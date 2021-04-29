@@ -69,3 +69,15 @@ table {
 th, td {
   padding: 15px;
 }
+.head-team{
+  /* width: 300px; */
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-auto-rows: 130px;
+}
+img{
+  justify-self: center;
+}
+p{
+  justify-self: start;
+}
