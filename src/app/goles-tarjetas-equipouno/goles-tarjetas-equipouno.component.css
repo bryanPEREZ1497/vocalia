@@ -1,5 +1,8 @@
-body {
-  background-color: black;
+.container {
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(63,81,181,1));
+    box-sizing:border-box;
+    width:100%;
+
   /* background: radial-gradient(black 3px, transparent 4px), radial-gradient(black 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #fff; */
   /* background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px; */
   /* background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px; */
@@ -16,6 +19,7 @@ body {
     border: none;
     border-radius: 1em;
     box-shadow:0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    background-color:white;
 
   }
   .equipo{
