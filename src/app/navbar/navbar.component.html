@@ -1,12 +1,6 @@
-<mat-toolbar color="primary" class="navbar">
-
-    <mat-toolbar-row>
-        <nav>
-            <span><a class="button" routerLink="/partido">&#8592;</a></span>
-            <span><a class="button" routerLink="/lista" routerLinkActive="activebutton">Lista de Jugadores</a></span>
-            <span><a class="button" routerLink="/goles" routerLinkActive="activebutton">Goles y Tarjetas</a></span>
-            <span><a class="button" class="btn btn-success">Guardar Información</a></span>
-        </nav>
-
-    </mat-toolbar-row>
-</mat-toolbar>
+<ul>
+  <li><a>Guardar Información</a></li>
+  <li><a routerLink="/goles" routerLinkActive="activebutton">Goles y Tarjetas</a></li>
+  <li><a routerLink="/lista" routerLinkActive="activebutton">Lista de Jugadores</a></li>
+  <li style="float:left"><a routerLink="/partido">&#8592;</a></li>
+</ul>
